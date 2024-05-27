@@ -1,0 +1,201 @@
+<mxfile host="app.diagrams.net" modified="2024-05-27T10:26:45.785Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="3a-NJAKzrU8yMC-gP2Wt" version="24.4.8" type="device">
+  <diagram name="Page-1" id="BC0mZh1vjTjfRyudSBVn">
+    <mxGraphModel dx="1167" dy="1719" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aWAtiRRyWMwktcFtGA---5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---1" target="aWAtiRRyWMwktcFtGA---2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---1" value="Start the program" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="440" y="-250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---2" target="aWAtiRRyWMwktcFtGA---3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---2" value="Setup" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="440" y="-130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---3" target="aWAtiRRyWMwktcFtGA---56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---3" value="LOOP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="440" y="-30" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" target="aWAtiRRyWMwktcFtGA---8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="345" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---60" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---4" target="aWAtiRRyWMwktcFtGA---8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---4" value="Display time &amp;amp; temp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+          <mxGeometry x="440" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="aWAtiRRyWMwktcFtGA---13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="505" y="400" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---8" value="Update alarm time" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="365" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---13" target="aWAtiRRyWMwktcFtGA---28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="595.0263157894738" y="512.4736842105264" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---13" target="aWAtiRRyWMwktcFtGA---31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---13" target="aWAtiRRyWMwktcFtGA---35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---13" target="aWAtiRRyWMwktcFtGA---45">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="538" y="465" />
+              <mxPoint x="845" y="465" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---13" value="IF Button pressed" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="455" width="130" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="aWAtiRRyWMwktcFtGA---17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="674.9736842105262" y="512.4736842105264" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---17" value="alarmHour = (alarmHour +1) % 24" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="705" y="477.5" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---28" value="ButtonHour" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="585" y="486.25" width="100" height="52.5" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---31" target="aWAtiRRyWMwktcFtGA---33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---31" value="ButtonMinute" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="600" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---33" value="alarmMinute = (alarmMinute+1)%60" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="605" y="595" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---35" target="aWAtiRRyWMwktcFtGA---36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---35" value="ButtontenMinute" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="482.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---36" value="alarmMinute = (alarmMinute+10)%60" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="590" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---63" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---39" target="aWAtiRRyWMwktcFtGA---62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---39" value="CheckAlarm" style="whiteSpace=wrap;html=1;fillColor=#008a00;strokeColor=#005700;fontColor=#ffffff;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="695" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---51" target="aWAtiRRyWMwktcFtGA---39">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="960" y="725" />
+              <mxPoint x="560" y="725" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---52" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---45" target="aWAtiRRyWMwktcFtGA---51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---45" value="AlarmSet" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="785" y="365" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---49" value="the alarm is set" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="695" y="435" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---50" value="the alarm time is then used to check" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="840" y="685" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---51" value="alarmSet=true" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="365" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---58" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---56" target="aWAtiRRyWMwktcFtGA---59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---56" value="Update time from NTP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+          <mxGeometry x="440" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---61" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---59" target="aWAtiRRyWMwktcFtGA---4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---59" value="read DHT11 sensor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+          <mxGeometry x="440" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---66" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---62" target="aWAtiRRyWMwktcFtGA---65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---62" value="Trigger alarm" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="1">
+          <mxGeometry x="440" y="810" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---64" value="if alarm triggered" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="770" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---69" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---65" target="aWAtiRRyWMwktcFtGA---68">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---65" value="Read motion sensor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="1">
+          <mxGeometry x="440" y="930" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---67" value="to turn the alarm off" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="880" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---71" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---68" target="aWAtiRRyWMwktcFtGA---70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---73" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---68" target="aWAtiRRyWMwktcFtGA---72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---68" value="IF motion detected" style="rhombus;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="1">
+          <mxGeometry x="460" y="1030" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---70" value="Turn off the alarm" style="whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1040" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---72" target="aWAtiRRyWMwktcFtGA---68">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="1150" />
+              <mxPoint x="500" y="1150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---72" value="alarm still on" style="whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="280" y="1040" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---74" value="yes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="540" y="1040" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---75" value="no" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="405" y="1040" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="aWAtiRRyWMwktcFtGA---4" target="aWAtiRRyWMwktcFtGA---4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="230" />
+              <mxPoint x="610" y="230" />
+              <mxPoint x="610" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---80" value="repeat every 1 second" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="605" y="240" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aWAtiRRyWMwktcFtGA---81" value="repeat&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="390" y="1120" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
