@@ -4,3 +4,10 @@ h1 {
 p {
   color: red;
 }
+.box {
+  text-align: center;
+  background-color: DodgerBlue;
+  border-style:solid;
+  border-width: 5px;
+  border-color: blue;
+}
