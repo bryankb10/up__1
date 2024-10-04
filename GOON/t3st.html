@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>HAWK TUH</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://unpkg.com/htmx.org@1.9.6"></script>
+<style>
+	body{
+	background-image:url('https://images.alphacoders.com/118/thumb-1920-1185254.jpg');
+	.cards{
+	flex: 1; cursor: pointer;
+	}
+	.cards:hover {
+	flex: 3;
+	}
+	.htmx-indicator { display: none; }
+    .htmx-request .htmx-indicator { display: inline; }
+    .htmx-request.deleting { opacity: 0.5; }
+
+</style>
+</head>
+<body>
+<h1><b> GAWK GAWK</b> </h1>
+<img src= "https://www.405th.com/forums/attachments/jotaro_kujo-png.280092/"alt="jojo" style = "float:right">
+<button hx-get="/hello" hx-target="#result" hx-swap="afterbegin">
+	Say hello
+</button>
+<div id="result"></div>
+<form hx-post="/submit" hx-target="#result">
+        <input type="email" name="email" required placeholder="Enter your email">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+<h1>Item List</h1>
+    <ul id="item-list">
+        <!-- Items will be loaded here -->
+    </ul>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        htmx.ajax('GET', '/items', {target: '#item-list', swap: 'innerHTML'});
+    });
+</script>
+
+
+</body>
+</html>
