@@ -1,42 +1,91 @@
 <!DOCTYPE html>
 
-<html>
+<html lang = "en">
 <head>
 <title>HAWK TUH</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css"></link>
 <script src="https://unpkg.com/htmx.org@1.9.6"></script>
-<style>
-	body{
-	background-image:url('https://images.alphacoders.com/118/thumb-1920-1185254.jpg');
-
-	.htmx-indicator { display: none; }
-     	.htmx-request .htmx-indicator { display: inline; }
-     	.htmx-request.deleting { opacity: 0.5; }
-
-</style>
 </head>
 <body>
 <h1><b> GAWK GAWK</b> </h1>
 <img src= "https://www.405th.com/forums/attachments/jotaro_kujo-png.280092/"alt="jojo" style = "float:right">
-<button hx-get="/hello" hx-target="#result" hx-swap="afterbegin">
-	Say hello
-</button>
-<div id="result"></div>
-<form hx-post="/submit" hx-target="#result">
-        <input type="email" name="email" required placeholder="Enter your email">
+
+<div class = "box">
+    <h1>HTMX Events and Extensions Example</h1>    
+    <form hx-post="/submit" hx-target="#result" hx-ext="custom-validator">
+        <input type="text" name="username" placeholder="Enter username">
+        <span class="error" id="username-error">Username is required</span>
+        <br><br>
+        <input type="email" name="email" placeholder="Enter email">
+        <span class="error" id="email-error">Invalid email format</span>
+        <br><br>
         <button type="submit">Submit</button>
+        <span class="loading"> Loading...</span>
     </form>
     <div id="result"></div>
-<h1>Item List</h1>
-    <ul id="item-list">
-        <!-- Items will be loaded here -->
-    </ul>
+</div>
+<div class = "hai">
+    <button hx-get="/hello" hx-target="#hello-result" hx-swap="afterbegin" style="margin-left: 30vw;right: 80%">
+	Say hello
+    </button>
+    <div id="hello-result"></div>
+</div>
+<div class="tabs">
+    <button hx-get="/tab1" hx-target="#content" class="active">Tab 1</button>
+    <button hx-get="/tab2" hx-target="#content">Tab 2</button>
+    <button hx-get="/tab3" hx-target="#content">Tab 3</button>
+  </div>
+  <div id="content">
+    <!-- Tab content will be loaded here -->
+  </div>
+  
+
+    <div class="box">
+        <h2>Item List</h2>
+        <ul id="item-list">
+        </ul>
+    <form hx-post="/add-item" hx-target="#item-list" hx-swap="beforeend">
+        <input type="text" name="itemName" required>
+        <button type="submit">Add Item</button>
+    </form>
+</div>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         htmx.ajax('GET', '/items', {target: '#item-list', swap: 'innerHTML'});
     });
 </script>
+    <div class = "container">
+        <a href="https://www.youtube.com/watch?v=lbnr0ReWfVQ"><img src = "https://pbs.twimg.com/profile_images/1761684017722847233/Oay_LeWL_400x400.jpg"alt="mumei"> </a>
+        <a href="https://www.youtube.com/watch?v=8ZP5eqm4JqM"><img src = "https://lh3.googleusercontent.com/3ur2xZzy95uPBvzBZUucsrjgJofjip-ANr4NYDsFpRTlumfohiXnZ-ytdZexDdn9w2O1xZjHMINwRA=w544-h544-p-l90-rj"alt="suisei"></a>
+        <a href="https://www.youtube.com/watch?v=j7RbmhKeaZs"><img src="https://i.scdn.co/image/ab67616d00001e029f372eac871a30fa7f278365"alt="mori"></a>
+    </div>
+
+<!--   <h1>Dynamic UI with HTMX</h1>
+    
+    <input type="text" name="search" placeholder="Search items..."
+           hx-get="/search"
+           hx-trigger="keyup changed delay:500ms"
+           hx-target="#item-list">
+    
+    <div id="item-list">
+    </div>
+
+    <div class="htmx-indicator">Loading more items...</div>
+ -->
+
+
+
+    <script>
+        document.body.addEventListener('htmx:beforeRequest', function(event) {
+            console.log('Request is about to be sent', event.detail);
+        });
+
+        document.body.addEventListener('htmx:afterRequest', function(event) {
+            console.log('Request completed', event.detail);
+        });
+    </script>
 
 
 </body>
