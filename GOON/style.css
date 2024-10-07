@@ -1,13 +1,95 @@
 h1 {
   color: orange;
+  text-align: center;
+}
+h2 {
+  color: orange;
+  text-align: center;
+}
+h3{
+  color: orange;
+  text-align: center;
+  border-style: solid;
+  border-color: black;
+  border-radius: 50px;
+  border-width: 5px;
+  background-color: white;
+  padding: 5px;
+  width: 50%;
+  margin: 20px auto;
+  
 }
 p {
   color: red;
 }
 .box {
-  text-align: center;
+  text-align: left;
   background-color: DodgerBlue;
   border-style:solid;
-  border-width: 5px;
   border-color: blue;
+  border-radius : 25px;
+  padding: 5px;
+  border-width: 5px;
+  width: 50%;
+  max-width: 600px;
+  margin: 20px auto;
+  height: auto;
+}
+body{
+	background-image:url('https://images.alphacoders.com/118/thumb-1920-1185254.jpg'); 
+}
+.htmx-indicator { display: none; }
+.htmx-request .htmx-indicator { display: inline; }
+.htmx-request.deleting { opacity: 0.5; }
+#item-list { max-height: 300px; overflow-y: auto; }
+
+button {
+  background-color: #d9e25bee;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+.container {
+  display: flex;
+  gap: 3px;
+  padding: 5px;
+}
+.container a img {
+  flex-grow: 1;
+  transition: flex-grow 0.3s ease, transform 0.3s ease;
+  max-width: 100%;
+  height: 100px;
+  width: 100px;
+}
+
+.container a img:hover {
+  flex-grow: 4;
+  transform: scale(1.1);
+  border: 2px solid black;
+}
+.hai {
+  text-align: center;
+}
+.tabs {
+  text-align: center;
+  margin: 10px 0;
+  margin-left: 30vw;
+}
+.tabs button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.tabs button.active {
+  background-color: DodgerBlue;
+  color: white;
+}
+#content {
+  border: 1px solid black;
 }
