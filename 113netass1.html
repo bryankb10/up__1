@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Team Introduction</title>
+        <style>
+            body {
+                background-color: #82b7f9;
+                font-family: Arial, sans-serif;
+            }
+            h1 {
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 30px;
+            }
+            .card {
+                background-color: aliceblue;
+                display: inline-block;
+                width: 250px;
+                margin: 25px;
+                padding: 15px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                transition: transform 0.5s;
+            }
+            .card:hover {
+                transform: translateY(-10px);
+                cursor: pointer;
+                flex-grow: 3;
+            }
+            .name {
+                font-size: 18px;
+                font-weight: bold;
+                color: #333;
+            }
+            .self-intro {
+                margin-top: 10px;
+                font-size: 14px;
+                color: #666;
+                display: none;
+            }
+            .box {
+                background-color: white;
+                border-style: solid;
+                border-color: black;
+                border-radius: 30px;
+                border-width: 5px;
+                height: 600px;
+                justify-content: center;
+            }
+        </style>
+        <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
+    </head>
+    <body>
+        <h1>TEAM INTRODUCTION</h1>
+        <div class="box">
+            <div class="card" _="on mouseenter set #intro1.style.display to 'block' on mouseleave set #intro1.style.display to 'none'">
+                <div class="name">Hardy Amuntai</div>
+                <div class="self-intro" id="intro1">
+                    My name is Hardy Amuntai, I am a third year computer science student from Indonesia.
+                </div>
+            </div>
+            <div class="card" _="on mouseenter set #intro2.style.display to 'block' on mouseleave set #intro2.style.display to 'none'">
+                <div class="name">Bryan Kenneth Budiyantoro</div>
+                <div class="self-intro" id="intro2">
+                    My name is Bryan Kenneth Budiyantoro, I am a third year computer science student from Indonesia.
+                </div>
+            </div>
+            <div class="card" _="on mouseenter set #intro3.style.display to 'block' on mouseleave set #intro3.style.display to 'none'">
+                <div class="name">Javier Wibowo</div>
+                <div class="self-intro" id="intro3">
+                    My name is Javier Wibowo, I am a third year computer science student from Indonesia.
+                </div>
+            </div>
+            <div class="card" _="on mouseenter set #intro4.style.display to 'block' on mouseleave set #intro4.style.display to 'none'">
+                <div class="name">Jonathan Brian</div>
+                <div class="self-intro" id="intro4">
+                    My name is Jonathan Brian, I am a third year computer science student from Indonesia.
+                </div>
+            </div>
+            <div class="card" _="on mouseenter set #intro5.style.display to 'block' on mouseleave set #intro5.style.display to 'none'">
+                <div class="name">Christiela</div>
+                <div class="self-intro" id="intro5">
+                    My name is Christiela, I am a third year computer science student from Indonesia.
+                </div>
+            </div>
+            <div class="card" _="on mouseenter set #intro6.style.display to 'block' on mouseleave set #intro6.style.display to 'none'">
+                <div class="name">Marvel E.I</div>
+                <div class="self-intro" id="intro6">
+                    My name is Marvel E.I, I am a third year computer science student from Indonesia.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
