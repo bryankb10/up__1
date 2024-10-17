@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Introduction</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #2f5a8f;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 35px;
+            color: white;
+        }
+        .carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            width: 80%;
+            padding: 20px;
+            background-color: #f3f4f6;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .card {
+            perspective: 1000px;
+            width: 130px;
+            height: 280px;
+            background-color: #fff;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .flip-container {
+            perspective: 1000px;
+        }
+        .flipper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        .card.flipped .flipper {
+            transform: rotateY(180deg);
+        }
+        .front, .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 5px;
+        }
+        .back {
+            background-image: url(https://img.freepik.com/free-photo/digital-art-moon-wallpaper_23-2150918941.jpg);
+            background-size: cover;
+            background-position: center;
+            transform: rotateY(180deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+        }
+        .back p{
+            justify-content: flex-end;
+            display: none;
+        }
+        .back:hover p{
+            display:block
+        }
+        .back img{
+            display:none;
+            position: absolute;
+            top: 73.5%;
+            left: 18.5%;
+            height: 20px;
+            width: 20px;
+        }
+        .git-info{
+            top:70%;
+            left: 25%;
+            position: absolute;
+        }
+        .card:hover {
+            width: 300px;
+            height: 400px;
+            transform: scale(1.05);
+        }
+        .name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            padding: 5px;
+            transition: all 0.3s ease;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .card:hover .name {
+            top: 10px;
+            left: 10px;
+            bottom: auto;
+        }
+        .self-intro {
+            margin-top: 10px;
+            font-size: 14px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #666;
+            text-align: center;
+            display: none;
+            position: absolute;
+            top: 40px;
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .role{
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            height: 60px;
+            width: 60px;
+            object-fit: scale-down;
+        }
+        .card:hover img {
+            display: block;
+        }
+        .card:nth-child(1){
+            background-color: transparent;
+            box-shadow:none;
+            
+        }
+        .card:nth-child(1) .front{
+            background-image: linear-gradient(
+                to right,
+            rgba(159, 153, 153, 0.5), /* Color with transparency */
+            rgba(0, 0, 0, 0.5)  /* Same color for a solid overlay */
+            ), url(https://ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg);
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .card:nth-child(1):hover{
+            width: 315px;
+            height: 420px;
+            transform: scale(1.00);
+        }
+        .card:nth-child(1) .name{
+            color: yellow;
+        }
+        .card:nth-child(1) .self-intro{
+            left: 2.5%;
+        }
+        .edgy{
+            display: none;
+            width: 250px;
+            height: 280px;
+            overflow: hidden;
+            position: absolute;
+            bottom: -80px;
+            left: 9%;
+            clip-path: inset(0 0 30% 0);
+            animation: berserker 2s ease 0s 1 normal forwards
+        }
+        .card:nth-child(3) {
+       	    background-image: linear-gradient(
+            to right,
+            rgba(159, 153, 153, 0.5), 
+            rgba(0, 0, 0, 0.5)  
+            ), url(https://s1.zerochan.net/Misono.Mika.600.4291469.jpg);
+    	    background-size: cover;
+   	    background-position: center;
+	    }
+	    .card:nth-child(3) .name {
+            color: #C4C0EC;
+	    }
+	    .card:nth-child(3):hover .name {
+            color: yellow;
+	    }
+        .halo{
+            display: none;
+            width: 250px;
+            height: 280px;
+            overflow: hidden;
+            position: absolute;
+            bottom: -75px;
+	        left: 20px;
+            clip-path: inset(0 0 30% 0);
+            animation: berserker 2s ease 0s 1 normal forwards
+        }
+        
+	    .bolaku {
+            width: 12px;
+    	    height: 12px;
+   	    background-color: #FFE1FF;
+    	    border-radius: 50%;
+    	    position: absolute;
+    	    top: 75.5%;
+    	    left: 35%;
+            margin-top: auto;
+    	    transform-origin: 45px;
+    	    opacity: 0;
+        }
+        .card:hover .bolaku {
+            animation-name: muterBolaku;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+	    }
+	    #bolaku1 { animation-delay: 0s; }
+        #bolaku2 { animation-delay: 0.6s; }
+        #bolaku3 { animation-delay: 1.2s; }
+        #bolaku4 { animation-delay: 1.8s; }
+        #bolaku5 { animation-delay: 2.4s; }
+
+        .rollcake{
+	    position: absolute;
+	    left: -32%;
+	    top: 40%;
+	    width: 40px;
+	    animation: muterRollcake 4s ease-in-out infinite;
+	}
+	.card:hover .rollcake {
+	    width: 80px;
+	}
+	#rollcake1 { animation-delay: 0s; width: 45%;}
+        #rollcake2 { animation-delay: 0.1s; width: 65%;}
+	#rollcake3 { animation-delay: 0.2s; width: 30%;}
+
+        @keyframes muterBolaku {
+            0% { 
+        	transform: rotate(0deg) translateX(95px); 
+       		opacity: 0;
+    	    }
+    	    25% {
+        	opacity: 0.1;
+    	    }
+    	    35% {
+        	opacity: 0.5;
+   	        }
+    	    50% {
+  	        opacity: 1;
+	        }
+	        70% {
+	        opacity: 0.7;
+ 	        }
+	        75% {
+	        opacity: 0.4;
+ 	        }
+	        90% {
+	        opacity: 0.2;
+ 	        }
+	        100% { 
+       		transform: rotate(360deg) translateX(95px); 
+        	opacity: 0;
+	        }
+
+        }
+	    @keyframes muterRollcake {
+	    49% {top: 25%;}
+	    50% {left: 95%;}
+	    80% {opacity:0;}
+	    }
+        @keyframes berserker {
+            0% {opacity: 0; transform: translateY(50px);}
+
+            100% {opacity: 1; transform: translateY(0);}
+        }
+        @keyframes shine-animation {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(10%); }
+        }
+    </style>    
+    <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
+</head>
+<body>
+    <h1>Team introduction</h1>
+    <div class="carousel">
+        <div class="card" _="on mouseenter 
+        set #intro1.style.display to 'block'on mouseleave set #intro1.style.display to 'none'">  
+            <div class="card flip-container"
+            _="on click toggle .flipped on me">
+                <div class="flipper">
+                    <div class="front" _="on mouseenter set body.style.backgroundColor to 'black' on mouseleave set body.style.backgroundColor to '#2f5a8f'">
+                        <div class="name">Hardy Amuntai</div>
+                        <div class="self-intro" id="intro1">
+                            <p>My name is Hardy Amuntai, I am a third year computer science student from Indonesia.</p>
+                            <p>My hometown is Jakarta, Indonesia. My interests are watching movies and shows, and I don't have any hobbies, I just like doing a bunch of things.</p>
+                            <p>Click the card for more info</p>
+                        </div>
+                        <img class="edgy" src="https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp" alt="darkknight">
+                        <img class= "role" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02aa6f8d-3ac2-49ee-8e4e-c817641c81b7/dg1jokp-33811d30-d721-403e-8f05-de17d3253d81.png/v1/fill/w_1280,h_1150/role_ml_05_by_morphysss_dg1jokp-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTE1MCIsInBhdGgiOiJcL2ZcLzAyYWE2ZjhkLTNhYzItNDllZS04ZTRlLWM4MTc2NDFjODFiN1wvZGcxam9rcC0zMzgxMWQzMC1kNzIxLTQwM2UtOGYwNS1kZTE3ZDMyNTNkODEucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.UdqnoqFKJ3X9rH34LfYla_ttclw30cf-M3fGITFjXr4" alt="tank">
+                    </div>
+                    <div class="back" _="on mouseenter set body.style.backgroundColor to '#881A07' on mouseleave set body.style.backgroundColor to '#2f5a8f'">
+                        <p>I'm proficient in java, c++, python, c and html/css, i usually specialize on hardware projects and design</p>
+                        <a href="https://github.com/Haitdyckler"><img src="https://static-00.iconduck.com/assets.00/github-icon-2048x2048-823jqxdr.png"alt="github"> </a>
+                        <div class="git-info"><p>Github account</p></div>           
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" _="on mouseenter set #intro2.style.display to 'block' then set body.style.backgroundColor to '#6CACE4' on mouseleave set #intro2.style.display to 'none' then set body.style.backgroundColor to '#2f5a8f'">
+            <div class="name">Bryan Kenneth Budiyantoro</div>
+            <div class="self-intro" id="intro2">
+                My name is Bryan Kenneth Budiyantoro, I am a third year computer science student from Indonesia.
+            </div>
+            <img class= "role" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02aa6f8d-3ac2-49ee-8e4e-c817641c81b7/dg1jok1-2f8f38ab-68d5-4783-ae03-d682189289ad.png/v1/fill/w_1280,h_2270/role_ml_02_by_morphysss_dg1jok1-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjI3MCIsInBhdGgiOiJcL2ZcLzAyYWE2ZjhkLTNhYzItNDllZS04ZTRlLWM4MTc2NDFjODFiN1wvZGcxam9rMS0yZjhmMzhhYi02OGQ1LTQ3ODMtYWUwMy1kNjgyMTg5Mjg5YWQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.0xHxH1gE8jPOEZDKKkT8SqHRsp2GYBJB06UE312NRI0" alt="fighter">
+        </div>
+        <div class="card" _="on mouseenter set #intro3.style.display to 'block' then set body.style.backgroundColor to '#8558E4' on mouseleave set #intro3.style.display to 'none' then set body.style.backgroundColor to '#2f5a8f'">
+            <div class="name">Javier Wibowo</div>
+            <div class="self-intro" id="intro3">
+                My name is Javier Wibowo, I am a third year computer science student from Indonesia.
+            </div>
+            <img class="halo" src="https://blue-utils.me/img/common/halo/mika.png" alt="halo">
+            <img class= "role" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02aa6f8d-3ac2-49ee-8e4e-c817641c81b7/dg1jojq-72057fed-327e-49d0-b8a8-0c5eacd7594d.png/v1/fill/w_1280,h_2028/role_ml_01_by_morphysss_dg1jojq-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjAyOCIsInBhdGgiOiJcL2ZcLzAyYWE2ZjhkLTNhYzItNDllZS04ZTRlLWM4MTc2NDFjODFiN1wvZGcxam9qcS03MjA1N2ZlZC0zMjdlLTQ5ZDAtYjhhOC0wYzVlYWNkNzU5NGQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.B_tzZAWsurJeHEY280ksu9uw_mKMy1iFAobQx2jBZPg" alt="marksman">
+            <div class="bolaku" id="bolaku1"></div>
+            <div class="bolaku" id="bolaku2"></div>
+            <div class="bolaku" id="bolaku3"></div>
+            <div class="bolaku" id="bolaku4"></div>
+            <div class="bolaku" id="bolaku5"></div>
+            <img class="rollcake" id="rollcake1" src="https://img1.picmix.com/output/stamp/normal/7/2/3/9/1779327_305aa.png" alt="rollcake">
+            <img class="rollcake" id="rollcake2" src="https://img1.picmix.com/output/stamp/normal/7/2/3/9/1779327_305aa.png" alt="rollcake">
+            <img class="rollcake" id="rollcake3" src="https://img1.picmix.com/output/stamp/normal/7/2/3/9/1779327_305aa.png" alt="rollcake">
+        </div>
+        <div class="card" _="on mouseenter set #intro4.style.display to 'block' on mouseleave set #intro4.style.display to 'none'">
+            <div class="name">Jonathan Brian</div>
+            <div class="self-intro" id="intro4">
+                My name is Jonathan Brian, I am a third year computer science student from Indonesia.
+            </div>
+            <img class= "role" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02aa6f8d-3ac2-49ee-8e4e-c817641c81b7/dg1joku-298a3207-39a0-465a-a9f3-61c625fbea96.png/v1/fill/w_1280,h_1164/role_ml_06_by_morphysss_dg1joku-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTE2NCIsInBhdGgiOiJcL2ZcLzAyYWE2ZjhkLTNhYzItNDllZS04ZTRlLWM4MTc2NDFjODFiN1wvZGcxam9rdS0yOThhMzIwNy0zOWEwLTQ2NWEtYTlmMy02MWM2MjVmYmVhOTYucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.guPRFgnYvUCcHJBbu-EQsgs0jHfn3pS413TdiIJllvk" alt="hyper">
+        </div>
+        <div class="card" _="on mouseenter set #intro5.style.display to 'block' on mouseleave set #intro5.style.display to 'none'">
+            <div class="name">Christiela</div>
+            <div class="self-intro" id="intro5">
+                My name is Christiela, I am a third year computer science student from Indonesia.
+            </div>
+            <img class= "role" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02aa6f8d-3ac2-49ee-8e4e-c817641c81b7/dg1jokg-685d37d5-c110-48b3-a924-f36273e9bab2.png/v1/fill/w_1280,h_2497/role_ml_04_by_morphysss_dg1jokg-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjQ5NyIsInBhdGgiOiJcL2ZcLzAyYWE2ZjhkLTNhYzItNDllZS04ZTRlLWM4MTc2NDFjODFiN1wvZGcxam9rZy02ODVkMzdkNS1jMTEwLTQ4YjMtYTkyNC1mMzYyNzNlOWJhYjIucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.ho0ZRTeA2-UBoQBtEIKJPbu7s7jkK8Dh0CavEZHrF0g" alt="mage">
+        </div>
+    </div>
+</body>
+</html>
